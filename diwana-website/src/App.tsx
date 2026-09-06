@@ -70,7 +70,15 @@ const stops = [
 export default function App() {
   const [theme, setTheme] = useState<'bus' | 'rain'>('bus')
   const [dialogueIndex, setDialogueIndex] = useState(0)
-  const [onlineCount, setOnlineCount] = useState(1208)
+  const [onlineCount, setOnlineCount] = useState(() => {
+    try {
+      const stored = localStorage.getItem('diwana_visitors')
+      const count = stored ? parseInt(stored) : 1200
+      const newCount = count + 1
+      localStorage.setItem('diwana_visitors', newCount.toString())
+      return newCount
+    } catch { return 1200 }
+  })
   const [nextStop, setNextStop] = useState('')
   const [isPlaying, setIsPlaying] = useState(false)
   const [showShare, setShowShare] = useState(false)
@@ -184,8 +192,11 @@ export default function App() {
 
   useEffect(() => {
     const i = setInterval(() => {
-      setOnlineCount(p => p + Math.floor(Math.random() * 5) - 2)
-    }, 8000)
+      setOnlineCount(p => {
+        const delta = Math.floor(Math.random() * 11) - 5
+        return Math.max(1, p + delta)
+      })
+    }, 5000)
     return () => clearInterval(i)
   }, [])
 
