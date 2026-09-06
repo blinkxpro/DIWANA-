@@ -1,17 +1,57 @@
+DIWANA website project ko inspect karo aur website ki branding properly configure karo.
+
+Requirements:
+
+1. Browser tab ka title Vercel ya kisi default naam ka nahi hona chahiye.
+   Set:
+   "DIWANA — Mumbai Travel Experience"
+
+2. DIWANA ka custom favicon use karo.
+   
+   - Project ke "public" folder mein available logo/image files check karo.
+   - Agar suitable DIWANA logo already available hai, usi ko favicon ke liye use karo.
+   - Agar logo available nahi hai, naya logo generate mat karo; mujhe batao ki logo file missing hai.
+   - Favicon ko "index.html" mein properly reference karo.
+
+3. "index.html" ke "<head>" ko inspect karke:
+   
+   - "<title>" correct karo.
+   - favicon "<link>" add/update karo.
+   - unnecessary default Vite branding hatao.
+   - Vite/React default metadata agar DIWANA se related nahi hai toh replace karo.
+
+4. Website ke UI mein kahin bhi:
+   
+   - Vercel
+   - Vite
+   - React default branding
+   - starter/template text
+     agar visible ho aur website ke liye unnecessary ho, identify karke remove karo.
+
+5. Existing DIWANA design, layout, animations, routes aur functionality ko unnecessarily change mat karo.
+
+6. SEO metadata bhi DIWANA ke according set karo:
+   
+   - title: "DIWANA — Mumbai Travel Experience"
+   - description: "Experience Mumbai with DIWANA — a unique Indian bus travel experience."
+   - theme-color website ke existing design ke according rakho.
+
+7. Agar project Vite + React hai toh Vite ke required configuration ko break mat karo.
+
+8. Changes complete karne ke baad project build karke verify karo:
+   "npm run build"
+
+9. Build error aaye toh khud fix karo.
+
+10. Finally mujhe batao:
+
+- Kaun-kaun si files change ki
+- Favicon kis file se use ho raha hai
+- Final page title kya hai
+- Build successful hua ya nahi
+
+IMPORTANT:
+Existing website ka design/functionality preserve karo. Sirf branding, metadata aur favicon ko professionally DIWANA ke naam se configure karo.
 
 
-Support the Platform to Stay Free FOREVER
-
-Daily 1 Lac Viewers are coming here and WebServer costs are high to keep this website smooth please send any amount you wish. Thank you in
-
-advance
-
-UPI ka ek image de diya hai HEP.jpg is name se woh de dena 
-
-Download QR Code
-
-Save it and scan with any UPI app.
-
-Dismiss
-
-support wale option me bki Kuch nhi chahiye sirf ye addd kar Dena with scanner. aur scanner ko download kar ne ka option bhi de dena 
+bhai logo ke liye logo diya hai LOGO.png ko usko lga dena logo
